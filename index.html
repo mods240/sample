@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>電子冊子ジェネレーター - サンプル</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    min-height:100vh;
+    background-color:#fff8ec;
+    background-image:
+      radial-gradient(circle, rgba(255,77,141,.16) 3px, transparent 3.5px),
+      radial-gradient(circle, rgba(23,195,178,.16) 3px, transparent 3.5px),
+      radial-gradient(circle, rgba(255,210,63,.2) 3px, transparent 3.5px);
+    background-size: 90px 90px, 110px 110px, 70px 70px;
+    background-position: 0 0, 30px 45px, 60px 10px;
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",-apple-system,BlinkMacSystemFont,sans-serif;
+    color:#241c3d;
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;
+  }
+  .wrap{max-width:640px;width:100%;text-align:center;}
+  .kicker{font-size:12px;letter-spacing:.24em;color:#e0316f;font-weight:800;}
+  h1{
+    margin:8px 0 10px;font-size:28px;
+    font-family:"Hiragino Maru Gothic ProN","M PLUS Rounded 1c","Yu Gothic",sans-serif;
+    font-weight:800;
+  }
+  p.lead{color:#6b6280;font-size:14px;line-height:1.8;margin:0 0 40px;}
+  .choices{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;}
+  .card{
+    flex:1;min-width:220px;max-width:260px;
+    background:#fff;border:3px solid #241c3d;border-radius:18px;
+    padding:28px 20px;text-decoration:none;color:#241c3d;
+    box-shadow:6px 6px 0 #ff4d8d;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .card:nth-of-type(2){ box-shadow:6px 6px 0 #ab3d2e; background:#20232b; color:#f2ead9; border-color:#f2ead9; }
+  .card:hover{ transform:translate(-2px,-2px); }
+  .card:nth-of-type(1):hover{ box-shadow:8px 8px 0 #ff4d8d; }
+  .card:nth-of-type(2):hover{ box-shadow:8px 8px 0 #ab3d2e; }
+  .swatch{
+    width:100%;height:64px;border-radius:10px;margin-bottom:16px;
+  }
+  .swatch.pop{ background:linear-gradient(135deg,#ff4d8d,#ffd23f,#17c3b2); }
+  .swatch.chic{ background:linear-gradient(135deg,#20232b,#ab3d2e,#c8973f); }
+  .card h2{ font-size:19px;font-weight:800;margin-bottom:6px; }
+  .card p{ font-size:12px;opacity:.8;line-height:1.6; }
+  footer{ margin-top:36px;font-size:11px;color:#a9a394; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">E-BOOKLET GENERATOR</div>
+  <h1>サンプルをご覧ください</h1>
+  <p class="lead">ポップ版・シック版、2つのデザインテーマのサンプルを用意しています。<br>気になる方をお選びください。</p>
+
+  <div class="choices">
+    <a class="card" href="/pop/">
+      <div class="swatch pop"></div>
+      <h2>ポップ</h2>
+      <p>クリーム背景+ピンク/ターコイズ/イエロー。<br>明るく賑やかな雰囲気です。</p>
+    </a>
+    <a class="card" href="/chic/">
+      <div class="swatch chic"></div>
+      <h2>シック</h2>
+      <p>ダークネイビー+金と朱。<br>落ち着いた上品な雰囲気です。</p>
+    </a>
+  </div>
+
+  <footer>&copy; E-Booklet Generator</footer>
+</div>
+</body>
+</html>
